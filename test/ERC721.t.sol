@@ -5,7 +5,7 @@ import {Test, console2} from "forge-std/Test.sol";
 import {erc721aNft} from "../src/ERC721A.sol";
 import {erc721Nft} from "../src/ERC721.sol";
 
-contract CounterTest is Test {
+contract ERC721Test is Test {
     erc721aNft public _erc721aNft;
     erc721Nft public _erc721Nft;
     address public user1 = makeAddr("user1");
@@ -23,7 +23,7 @@ contract CounterTest is Test {
 
          _erc721aNft.approve(user2, 0);
         
-        _erc721aNft.transferFrom(user1, user2, 0);
+        _erc721aNft.transferFrom(user1, user2, 2);
     }
 
     function test_erc721() public {
@@ -33,6 +33,6 @@ contract CounterTest is Test {
 
         _erc721Nft.approve(user2, 0);
         
-        _erc721Nft.transferFrom(user1, user2, 0);
+        _erc721Nft.transferFrom(user1, user2, 2);
     }
 }
